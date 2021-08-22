@@ -9,4 +9,5 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 char *_prompt(char **envp);
+char *_searchpath(char **envi);
 #endif
