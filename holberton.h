@@ -10,4 +10,5 @@
 #include <sys/wait.h>
 char *_prompt(char **envp);
 char *_searchpath(char **envi);
+char **_tokpath(char *string);
 #endif
