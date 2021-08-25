@@ -15,7 +15,7 @@ char *_searchpath(char **envi)
 	while (envi != NULL)
 	{
 		string = envi[i];
-		comp = _strcmp(string, string2, 4);
+		comp = _strcmp(string, string2);
 		if (comp == 0)
 		{
 			return (envi[i]);
