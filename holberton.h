@@ -22,6 +22,7 @@ char *_is_ascii(char *buffer);
 
 char *sep_check(char *buffer);
 char *_prompt(char **envp);
+void _printstring(char *color);
 char *_searchpath(char **envi);
 char **_tokpath(char *string);
 
