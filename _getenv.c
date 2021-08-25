@@ -14,10 +14,10 @@ char *_getenv(const char *name)
 	unsigned int i;
 
 	i = 0;
-	while (environ[i] != '\0')
+	while (*environ[i] != '\0')
 	{
 		temp = _strdup(environ[i]);
-		if (temp == '\0')
+		if (*temp == '\0')
 		{
 			perror("Error: can not allocate memory space for tmp variable for process");
 			return ('\0');
@@ -27,7 +27,7 @@ char *_getenv(const char *name)
 		{
 			token = strtok(NULL, sep);
 			value = _strdup(token);
-			if (value == '\0')
+			if (*value == '\0')
 			{
 				perror("Error: can not allocate memory space for tmp process");
 				free(temp);

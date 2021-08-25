@@ -11,18 +11,18 @@ char *_strcat(char *s1, char *s2)
 	char *result;
 	unsigned int len_1, len_2, n;
 
-	if (s1 == '\0')
+	if (*s1 == '\0')
 	{
 		s1 = "";
 	}
-	if (s2 == '\0')
+	if (*s2 == '\0')
 	{
 		s2 = "";
 	}
 	len_1 = _strlen(s1);
 	len_2 = _strlen(s2);
 	result = malloc((sizeof(char) * (len_1 + len_2)) + 1);
-	if (result == '\0')
+	if (*result == '\0')
 	{
 		perror("Error: can not allocate memmory for temp process");
 		exit(1);

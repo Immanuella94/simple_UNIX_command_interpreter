@@ -13,7 +13,7 @@ unsigned int token_count(char *str, char del[])
 
 	token = strtok(str, del);
 	m = 0;
-	while (token != '\0')
+	while (*token != '\0')
 	{
 		token = strtok('\0', del);
 		m++;
@@ -39,7 +39,7 @@ char **split_token(char **splt_str, char *str, unsigned int m, char del[])
 	while (p_idx < m)
 	{
 		splt_str[p_idx] = _strdup(token);
-		if (splt_str[p_idx] == '\0')
+		if (*splt_str[p_idx] == '\0')
 		{
 			while (p_idx > 0)
 			{
@@ -71,13 +71,13 @@ char **str_to_2d(char *buff_str, char del[])
 	unsigned int m;
 
 	tmp_len = _strdup(buff_str);
-	if (tmp_len == '\0')
+	if (*tmp_len == '\0')
 	{
 		perror("Failed to allocate memmory to temp process");
 		exit(1);
 	}
 	tmp_splt = _strdup(buff_str);
-	if (tmp_splt == '\0')
+	if (*tmp_splt == '\0')
 	{
 		perror("Failed to allocate memmory to temp process");
 		free(tmp_len);
@@ -87,7 +87,7 @@ char **str_to_2d(char *buff_str, char del[])
 	tmp_len = '\0';
 	free(tmp_len);
 	splt_str = malloc((m * sizeof(char *)) + 1);
-	if (splt_str == '\0')
+	if (**splt_str == '\0')
 	{
 		perror("Failed to allocate memmory to 2 dim array");
 		free(tmp_splt);
