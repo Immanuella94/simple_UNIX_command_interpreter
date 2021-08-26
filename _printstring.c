@@ -10,7 +10,7 @@ void _printstring(char *text)
 
 	while (text[i] != '\0')
 	{
-		_putchar(text[i]);
+		_printchar(text[i]);
 		i++;
 	}
 
